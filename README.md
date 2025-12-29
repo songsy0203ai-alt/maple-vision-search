@@ -1,4 +1,4 @@
-# [Maple-Vision-Search]
+# 🍁Maple-Vision-Search
 
 **Semantic Game Scene Retrieval & Situation Analysis System using YOLOv8 and CLIP**
 

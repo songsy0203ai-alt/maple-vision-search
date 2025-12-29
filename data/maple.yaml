@@ -1,0 +1,9 @@
+# maple.yaml
+path: ../data/processed  # 데이터셋 루트 경로
+train: images/train      # 학습 이미지 경로
+val: images/val          # 검증 이미지 경로
+
+# 클래스 정의 (추출할 리소스에 맞춰 수정)
+names:
+  0: character
+  1: monster

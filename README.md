@@ -83,22 +83,31 @@
 
 
 ---
+## 7. 포즈 분류 모델과 검색 모델 최종 성능
 
-## 7. 최종 성능(YOLOv8 기반 분류 모델, Jina-CLIP 기반 검색 모델)
-
-### 1. YOLOv8 기반 - 객체 탐지 및 포즈 분류 모델 최종 성능
-![result.png](/home/ssy/maple-vision-search/notebook/maple_yolo/pose_detection_v1/results.png)
-![confusion_matrix_normalized.png](/home/ssy/maple-vision-search/notebook/maple_yolo/pose_detection_v1/confusion_matrix_normalized.png)
-라벨
-![val_batch0_labels.jpg](/home/ssy/maple-vision-search/notebook/maple_yolo/pose_detection_v1/val_batch0_labels.jpg)
-
-예측
-![val_batch0_pred.jpg](/home/ssy/maple-vision-search/notebook/maple_yolo/pose_detection_v1/val_batch0_pred.jpg)
+### 7.1 YOLOv8 기반 - 객체 탐지 및 포즈 분류 모델 최종 성능
 
 ① mAP50 ($0.8600$) : 객체의 위치를 정확히 찾고 클래스를 분류할 확률이 86%
 ② Mean Recall ($0.8109$) : 화면에 있는 캐릭터 10마리 중 약 8마리 이상을 놓치지 않고 찾아냄
 ③ Mean Precision ($0.7463$) : 모델이 '1번 포즈'라고 예측한 것 중 실제 1번 포즈일 확률이 75%이며, Recall에 비해 낮은 수치는 배경의 일부를 캐릭터로 오인하거나, 포즈를 잘못 판단한 경우가 종종 발생함을 시사
 ④ 추론 속도 (Total $\approx 5.36ms$) : Pre + Inference + Post 프로세스를 합쳐 장당 약 $5.4ms$가 소요. 이를 FPS로 환산하면 약 $186$ FPS.
+
+1. 결과 곡선
+
+![result](./notebook/maple_yolo/pose_detection_v1/results.png)
+
+2. 혼동 행렬
+
+![confusion_matrix](./notebook/maple_yolo/pose_detection_v1/confusion_matrix_normalized.png)
+
+#### 라벨 vs 예측 비교
+1. 라벨
+
+![labels](./notebook/maple_yolo/pose_detection_v1/val_batch0_labels.jpg)
+
+2. 예측
+
+![pred](./notebook/maple_yolo/pose_detection_v1/val_batch0_pred.jpg)
 
 ### 2. Jina-CLIP 기반 - 검색 모델 최종 성능
 ① 2D 픽셀 이미지 데이터의 특수성

@@ -207,7 +207,25 @@ marimo/_lsp/
 __marimo__/
 
 # Maple Project Specific
-*.wz
-*.pt
-data/raw/
-data/processed/
+*.wz                    # 메이플스토리 데이터 파일 (저작권 및 대용량)
+*.pt                    # YOLOv8 가중치 파일 (best.pt 등)
+*.pth                   # MobileNet 가중치 파일 (best_pose_classifier.pth 등)
+
+# Data Directories (데이터셋 및 생성된 이미지)
+data/raw/               # 원본 포즈 및 배경 소스
+data/processed/         # 전처리된 데이터
+data/labeled/           # 3-way 분할된 분류 학습용 데이터 (train/val/test)
+data/yolo_dataset/
+data/classifier_dataset/ # 증강된 초기 데이터셋 폴더
+data/raw/all_generated/ # YOLO 학습용 500장 합성 데이터 및 라벨
+data/processed/* # 자동 크롭 된 캐릭터 이미지 폴더
+!data/processed/.gitkeep
+
+# Python & Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.log                   # 학습 로그 파일
+*.py[cod]
+
+# IDE settings
+.vscode/

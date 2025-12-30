@@ -1,9 +1,17 @@
 # maple.yaml
-path: ../data/processed  # 데이터셋 루트 경로
-train: images/train      # 학습 이미지 경로
-val: images/val          # 검증 이미지 경로
+path: /home/ssy/maple-vision-search/data/raw/all_generated  # YOLO 학습 데이터 루트 경로
+train: train.txt  # 이미지 목록 파일 경로 (또는 images/train 폴더)
+val: test.txt     # 검증용 목록 파일 경로
 
-# 클래스 정의 (추출할 리소스에 맞춰 수정)
+# 클래스 정의: MobileNet의 ImageFolder 인덱스 순서(알파벳순)와 일치
 names:
-  0: character
-  1: monster
+  0: fly
+  1: jump
+  2: prone
+  3: shoot1
+  4: stabO1
+  5: stand1
+  6: stand2
+  7: swingO1
+  8: walk1
+  9: walk2

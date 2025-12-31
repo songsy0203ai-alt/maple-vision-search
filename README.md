@@ -21,7 +21,7 @@
 1. **Data Generation**: 캐릭터의 포즈별 png 데이터로 랜덤 배경맵 합성 이미지 데이터와 해당 게임 화면 이미지에서 캐릭터가 배치된 위치 데이터를 생성하여 Ground Truth 확보.
     - 포즈 예시 : prone, fly, jump 등
     - 배경맵 예시 : 헤네시스, 엘리니아, 커닝시티 등
-    생성된 합성 이미지 속 캐릭터의 포즈 클래스 라벨링이 되어있지 않아서, 이를 자동화하기 위해 MobileNet을 전이학습 시킴.`01_pose_classification_model.ipynb`
+    - 생성된 합성 이미지 속 캐릭터의 포즈 클래스 라벨링이 되어있지 않아서, 이를 자동화하기 위해 MobileNet을 백본으로 전이학습 수행.`01_pose_classification_model.ipynb`
 2. **Object Detection**: YOLOv8을 전이학습 시켜서, 새롭게 주어지는 게임 화면 이미지 내 주요 객체(Player, Mob)의 위치 및 포즈 탐지.
 3. **Vector Indexing**: 한국어가 지원되는 Jina-CLIP-v2 모델로 이미지와 텍스트 데이터를 벡터화하여 고차원 임베딩 공간에 저장.
 4. **Semantic Search**: 사용자의 자연어 질문을 벡터로 변환한 후, 2단계 코사인 유사도 계산 기반의 근사 최근접 이웃 검색 수행.

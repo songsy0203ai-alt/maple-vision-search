@@ -113,6 +113,8 @@
 ![pred](./notebook/maple_yolo/pose_detection_v1/val_batch0_pred.jpg)
 
 ### 2. Jina-CLIP 기반 - 검색 모델 최종 성능
+<img width="1614" height="603" alt="image" src="https://github.com/user-attachments/assets/a6b2f294-9671-4836-ae5b-e5a27575adc8" />
+
 ① 2D 픽셀 이미지 데이터의 특수성
 
 - 모든 예시에서 $ImgSim$이 $0.2$대로 매우 낮게 측정 됨. 

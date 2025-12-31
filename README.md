@@ -63,7 +63,7 @@
 
 ---
 
-## 6. 검색 시스템 개발 중 Trouble Shooting
+## 6. Trouble Shooting
 
 ### 1. 문제 인식 (Problem Recognition)
 
